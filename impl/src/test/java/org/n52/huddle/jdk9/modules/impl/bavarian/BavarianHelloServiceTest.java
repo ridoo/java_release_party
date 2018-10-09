@@ -1,4 +1,4 @@
-package org.n52.huddle.jdk9.modules.impl;
+package org.n52.huddle.jdk9.modules.impl.bavarian;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.n52.huddle.jdk9.modules.impl.bavarian.BavarianHelloService.DEFAULT_PHRASE;
@@ -8,14 +8,13 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.n52.huddle.jdk9.modules.api.HelloService;
-import org.n52.huddle.jdk9.modules.impl.bavarian.BavarianHelloService;
 
-public class BavarianHelloServiceTest {
+class BavarianHelloServiceTest {
 
     private HelloService service;
 
     @BeforeEach
-    public void beforeEach() {
+    void beforeEach() {
         this.service = new BavarianHelloService();
     }
 
@@ -25,7 +24,7 @@ public class BavarianHelloServiceTest {
 
         @Test
         @DisplayName("Greet with default phrase")
-        public void expectDefaultHello() {
+        void expectDefaultHello() {
             assertThat(service.sayHello()).isEqualTo(DEFAULT_PHRASE);
         }
 
@@ -37,7 +36,7 @@ public class BavarianHelloServiceTest {
 
         @Test
         @DisplayName("Greet with 'Gruezi!'")
-        public void expectGreetWithCustomizedPhrase() {
+        void expectGreetWithCustomizedPhrase() {
             HelloService service = new BavarianHelloService("Gruezi!");
             assertThat(service.sayHello()).isEqualTo("Gruezi!");
         }
@@ -51,7 +50,7 @@ public class BavarianHelloServiceTest {
 
         @Test
         @DisplayName("Greet with default phrase in case of empty String")
-        public void expectDefaultGreetWhenPhraseIsEmpty() {
+        void expectDefaultGreetWhenPhraseIsEmpty() {
             HelloService service = new BavarianHelloService("");
             assertThat(service.sayHello()).isEqualTo(DEFAULT_PHRASE);
         }
