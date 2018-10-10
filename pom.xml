@@ -20,7 +20,6 @@
         <module>app</module>
         <module>api</module>
         <module>impl</module>
-        <module>webapp</module>
     </modules>
 
     <properties>
