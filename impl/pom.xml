@@ -15,7 +15,7 @@
             <groupId>org.n52.huddle.jdk9</groupId>
             <artifactId>api</artifactId>
         </dependency>
-
+        
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
@@ -35,26 +35,16 @@
             <artifactId>assertj-core</artifactId>
         </dependency>
     </dependencies>
-
+    
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <compilerArgs>
-                        <arg>--add-modules=org.assertj.core,org.junit.jupiter.api</arg>
-                    </compilerArgs>
-                </configuration>
-            </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <argLine>
-                        --add-opens=org.n52.huddle.modules.impl/org.n52.huddle.jdk9.modules.impl.bavarian=ALL-UNNAMED
-                        --add-opens=org.n52.huddle.modules.impl/org.n52.huddle.jdk9.streams=ALL-UNNAMED
+                        --add-opens=implmodule/org.n52.huddle.jdk9.modules.impl.bavarian=ALL-UNNAMED
+                        --add-opens=implmodule/org.n52.huddle.jdk9.streams=ALL-UNNAMED
                     </argLine>
                 </configuration>
             </plugin>

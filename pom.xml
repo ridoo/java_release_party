@@ -8,17 +8,17 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <organization>
+        <name>52North GmbH</name>
+        <url>https://52north.org</url>
+    </organization>
+
     <parent>
         <groupId>org.n52</groupId>
         <artifactId>parent</artifactId>
-        <version>13-SNAPSHOT</version>
+        <version>12</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
-
-    <organization>
-        <name>52North</name>
-        <url>https://52north.org</url>
-    </organization>
 
     <modules>
         <module>app</module>
@@ -30,7 +30,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <version.java>11</version.java>
+        <java.version>11</java.version>
         <spring-boot.version>2.1.0.M4</spring-boot.version>
     </properties>
 
@@ -122,6 +122,21 @@
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                    <configuration>
+                        <compilerArgument>-Xlint:all</compilerArgument>
+                        <showWarnings>true</showWarnings>
+                        <showDeprecation>true</showDeprecation>
+                        <compilerVersion>${java.version}</compilerVersion>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-enforcer-plugin</artifactId>
                     <version>1.4.1</version>
                     <configuration>
@@ -140,12 +155,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>3.0.1</version>
-<!--                     <configuration> -->
-<!--                         <show>package</show> -->
-<!--                         <author>false</author> -->
-<!--                         <quiet>true</quiet> -->
-<!--                         <nohelp>true</nohelp> -->
-<!--                     </configuration> -->
                 </plugin>
 
                 <plugin>
@@ -165,7 +174,6 @@
 
             </plugins>
         </pluginManagement>
-
     </build>
 
     <profiles>
@@ -175,7 +183,7 @@
                 <jdk>9</jdk>
             </activation>
             <properties>
-                <version.java>9</version.java>
+                <java.version>9</java.version>
             </properties>
         </profile>
 
@@ -185,7 +193,7 @@
                 <jdk>10</jdk>
             </activation>
             <properties>
-                <version.java>10</version.java>
+                <java.version>10</java.version>
             </properties>
         </profile>
     </profiles>
