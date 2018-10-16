@@ -15,7 +15,7 @@
             <groupId>org.n52.huddle.jdk9</groupId>
             <artifactId>api</artifactId>
         </dependency>
-
+        
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
@@ -40,7 +40,7 @@
             <artifactId>assertj-core</artifactId>
         </dependency>
     </dependencies>
-
+    
     <build>
         <plugins>
             <plugin>
@@ -52,7 +52,7 @@
                     </compilerArgs>
                 </configuration>
             </plugin>
-
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>

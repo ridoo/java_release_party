@@ -8,17 +8,17 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <organization>
+        <name>52North GmbH</name>
+        <url>https://52north.org</url>
+    </organization>
+
     <parent>
         <groupId>org.n52</groupId>
         <artifactId>parent</artifactId>
         <version>12</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
-
-    <organization>
-        <name>52North</name>
-        <url>https://52north.org</url>
-    </organization>
 
     <modules>
         <module>app</module>
@@ -216,17 +216,11 @@
                         </rules>
                     </configuration>
                 </plugin>
-
+                
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>3.0.1</version>
-<!--                     <configuration> -->
-<!--                         <show>package</show> -->
-<!--                         <author>false</author> -->
-<!--                         <quiet>true</quiet> -->
-<!--                         <nohelp>true</nohelp> -->
-<!--                     </configuration> -->
                 </plugin>
 
                 <plugin>
@@ -246,7 +240,6 @@
 
             </plugins>
         </pluginManagement>
-
     </build>
 
     <repositories>
@@ -270,5 +263,4 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
 </project>
