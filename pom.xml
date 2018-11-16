@@ -30,7 +30,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <spring-boot.version>2.1.0.M4</spring-boot.version>
+        <spring-boot.version>2.1.0.RELEASE</spring-boot.version>
         <java.version>10</java.version>
     </properties>
 
@@ -149,7 +149,7 @@
                         </rules>
                     </configuration>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
@@ -161,7 +161,7 @@
                     <!-- <nohelp>true</nohelp> -->
                     <!-- </configuration> -->
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
