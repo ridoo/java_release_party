@@ -16,7 +16,7 @@
     <parent>
         <groupId>org.n52</groupId>
         <artifactId>parent</artifactId>
-        <version>12</version>
+        <version>13-SNAPSHOT</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
 
@@ -31,7 +31,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <spring-boot.version>2.1.0.RELEASE</spring-boot.version>
-        <java.version>10</java.version>
+        <version.java>10</version.java>
     </properties>
 
     <dependencyManagement>
