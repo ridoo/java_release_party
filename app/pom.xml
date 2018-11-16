@@ -9,5 +9,16 @@
     </parent>
 
     <artifactId>app</artifactId>
+    
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>impl</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
