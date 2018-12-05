@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class LambdaWithLocalVarTest {
@@ -22,7 +23,8 @@ public class LambdaWithLocalVarTest {
     @Test
     public void given_havingNullsInList_when_usingNotNullAnnotatition_thenlowerCaseSucceeds() {
         assertThat(Stream.of("FOO", "BAR", null, "BAZ")
-//                         .map((var it) -> it.toLowerCase())
+                         .filter(it -> it != null)
+                         .map((var it) -> it.toLowerCase())
                          .collect(Collectors.toList())).hasSize(3);
     }
 }

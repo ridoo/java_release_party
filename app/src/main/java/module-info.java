@@ -26,9 +26,9 @@
  * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
  * for more details.
  */
-module org.n52.huddle.modules.app {
+module app_module {
 
-    requires org.n52.huddle.modules.impl;
+    requires api_module;
 
     uses org.n52.huddle.jdk9.modules.api.HelloService;
 }

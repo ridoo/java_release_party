@@ -18,6 +18,7 @@
         <dependency>
             <groupId>org.n52.huddle.jdk9</groupId>
             <artifactId>impl</artifactId>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 
